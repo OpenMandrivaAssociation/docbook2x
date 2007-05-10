@@ -1,8 +1,8 @@
 %define oname  docbook2X
 
 Name: 		docbook2x
-Version: 	0.8.7
-Release:	%mkrel 2
+Version: 	0.8.8
+Release:	%mkrel 1
 Group:		Publishing
 Url:		http://docbook2x.sourceforge.net/
 Summary:	A docbook to GNU Texinfo format converter
