@@ -12,7 +12,7 @@ Source0:	http://ovh.dl.sourceforge.net/sourceforge/%{name}/%{oname}-%{version}.t
 BuildRequires:	libxslt-proc
 BuildRequires:	perl(XML::SAX)
 Requires(post): info-install
-Requires(postun):info-install
+Requires(preun):info-install
 Conflicts:       docbook-utils
 
 %description
