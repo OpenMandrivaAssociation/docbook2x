@@ -52,5 +52,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/utf8trans
 %{_docdir}/docbook2X
 %{_datadir}/docbook2X
-%{_mandir}/man1/*.bz2
-%{_infodir}/*.bz2
+%{_mandir}/man1/*
+%{_infodir}/*
