@@ -7,7 +7,6 @@ Group:		Publishing
 Url:		http://docbook2x.sourceforge.net/
 Summary:	A docbook to GNU Texinfo format converter
 License:	MIT
-BuildRoot:	%{_tmppath}/%name-%version-buildroot
 Source0:	http://ovh.dl.sourceforge.net/sourceforge/%{name}/%{oname}-%{version}.tar.bz2
 BuildRequires:	libxslt-proc
 BuildRequires:	perl(XML::SAX)
