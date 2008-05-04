@@ -2,7 +2,7 @@
 
 Name: 		docbook2x
 Version: 	0.8.8
-Release:	%mkrel 2
+Release:	%mkrel 3
 Group:		Publishing
 Url:		http://docbook2x.sourceforge.net/
 Summary:	A docbook to GNU Texinfo format converter
@@ -11,6 +11,7 @@ BuildRoot:	%{_tmppath}/%name-%version-buildroot
 Source0:	http://ovh.dl.sourceforge.net/sourceforge/%{name}/%{oname}-%{version}.tar.bz2
 BuildRequires:	libxslt-proc
 BuildRequires:	perl(XML::SAX)
+Requires:	libxslt-proc
 Requires(post): info-install
 Requires(preun):info-install
 Conflicts:       docbook-utils
