@@ -2,19 +2,18 @@
 
 Name: 		docbook2x
 Version: 	0.8.8
-Release:	%mkrel 7
+Release:	%mkrel 8
+Summary:	A docbook to GNU Texinfo format converter
 Group:		Publishing
 Url:		http://docbook2x.sourceforge.net/
-Summary:	A docbook to GNU Texinfo format converter
 License:	MIT
-BuildRoot:	%{_tmppath}/%name-%version-buildroot
 Source0:	http://ovh.dl.sourceforge.net/sourceforge/%{name}/%{oname}-%{version}.tar.bz2
 BuildRequires:	libxslt-proc
 BuildRequires:	perl(XML::SAX)
-Requires:	libxslt-proc
+Requires:	xsltproc
 Requires(post): info-install
 Requires(preun):info-install
-#Conflicts:       docbook-utils
+BuildRoot:	%{_tmppath}/%name-%version
 
 %description
 Converts DocBook documents into the traditional Unix man page format
@@ -24,9 +23,8 @@ and the GNU Texinfo format.
 %setup -q -n %{oname}-%{version}
 
 %build
-
 # to avoid clashing with docbook2* from docbook-utils
-%configure2_5x --program-transform-name='s/docbook2/db2x_docbook2/' 
+%configure2_5x --program-transform-name='s/^docbook2/docbook2x-/'
 %make
 
 %install
@@ -48,8 +46,8 @@ rm -rf %{buildroot}
 %{_bindir}/db2x_manxml
 %{_bindir}/db2x_texixml
 %{_bindir}/db2x_xsltproc
-%{_bindir}/db2x_docbook2man
-%{_bindir}/db2x_docbook2texi
+%{_bindir}/docbook2x-man
+%{_bindir}/docbook2x-texi
 %{_bindir}/sgml2xml-isoent
 %{_bindir}/utf8trans
 %{_docdir}/docbook2X
