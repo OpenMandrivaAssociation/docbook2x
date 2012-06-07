@@ -1,8 +1,8 @@
 %define oname  docbook2X
 
-Name: 		docbook2x
-Version: 	0.8.8
-Release:	%mkrel 8
+Name:		docbook2x
+Version:	0.8.8
+Release:	9
 Summary:	A docbook to GNU Texinfo format converter
 Group:		Publishing
 Url:		http://docbook2x.sourceforge.net/
@@ -11,9 +11,6 @@ Source0:	http://ovh.dl.sourceforge.net/sourceforge/%{name}/%{oname}-%{version}.t
 BuildRequires:	libxslt-proc
 BuildRequires:	perl(XML::SAX)
 Requires:	xsltproc
-Requires(post): info-install
-Requires(preun):info-install
-BuildRoot:	%{_tmppath}/%name-%version
 
 %description
 Converts DocBook documents into the traditional Unix man page format
@@ -29,20 +26,9 @@ and the GNU Texinfo format.
 
 %install
 rm -rf %{buildroot}
-
 %makeinstall_std
 
-%post
-%_install_info %name
-
-%preun
-%_remove_install_info %name
-
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr (-,root,root)
 %{_bindir}/db2x_manxml
 %{_bindir}/db2x_texixml
 %{_bindir}/db2x_xsltproc
