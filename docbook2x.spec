@@ -3,7 +3,7 @@
 Summary:	A docbook to GNU Texinfo format converter
 Name:		docbook2x
 Version:	0.8.8
-Release:	12
+Release:	13
 Group:		Publishing
 License:	MIT
 Url:		http://docbook2x.sourceforge.net/
