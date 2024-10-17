@@ -6,7 +6,7 @@ Version:	0.8.8
 Release:	20
 Group:		Publishing
 License:	MIT
-Url:		http://docbook2x.sourceforge.net/
+Url:		https://docbook2x.sourceforge.net/
 Source0:	http://ovh.dl.sourceforge.net/sourceforge/%{name}/%{oname}-%{version}.tar.bz2
 BuildRequires:	xsltproc
 BuildRequires:	perl(XML::SAX)
